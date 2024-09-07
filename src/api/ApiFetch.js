@@ -11,7 +11,7 @@ function ApiFetch(props) {
    if (props.method !== 'GET' && props.body) {
       requestOptions.body = JSON.stringify(props.body);
    }
-
+   
    return new Promise((resolve, reject) => {
       fetch(InitialUrl + props.url, requestOptions)
          .then((response) => {
